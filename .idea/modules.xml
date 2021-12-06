@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Wk14-automation.iml" filepath="$PROJECT_DIR$/.idea/Wk14-automation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Wk14-automation-practice/Wk14-automation-practice.iml" filepath="$PROJECT_DIR$/Wk14-automation-practice/Wk14-automation-practice.iml" />
+    </modules>
+  </component>
+</project>
