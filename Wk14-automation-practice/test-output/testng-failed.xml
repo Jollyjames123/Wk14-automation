@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Wk14-automation(failed)">
+    <classes>
+      <class name="com.automation.testsuite.CreateAccountPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="inIt"/>
+          <include name="verifyThatUserShouldCreateAccountSuccessfully"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.testsuite.CreateAccountPageTest -->
+    </classes>
+  </test> <!-- Wk14-automation(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Clicking on SignIn[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //a[contains(text(),'Sign in')]]<br>]]>
+    </line>
+    <line>
+      <![CDATA[Entering the email : [[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='email_create']]<br>]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on create account[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //button[@id='SubmitCreate']]<br>]]>
+    </line>
+    <line>
+      <![CDATA[Entering firstname[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='customer_firstname']]<br>]]>
+    </line>
+    <line>
+      <![CDATA[Entering lastname[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='customer_lastname']]<br>]]>
+    </line>
+    <line>
+      <![CDATA[Entering password[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='passwd']]<br>]]>
+    </line>
+    <line>
+      <![CDATA[Entering address[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='address1']]<br>]]>
+    </line>
+    <line>
+      <![CDATA[Entering city[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='city']]<br>]]>
+    </line>
+    <line>
+      <![CDATA[Selecting the state[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //select[@id='id_state']]<br>]]>
+    </line>
+    <line>
+      <![CDATA[Entering postalcode[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='postcode']]<br>]]>
+    </line>
+    <line>
+      <![CDATA[Entering contact number[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='phone_mobile']]<br>]]>
+    </line>
+    <line>
+      <![CDATA[Clicking on register link[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //button[@id='submitAccount']]<br>]]>
+    </line>
+    <line>
+      <![CDATA[Verifying the message[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //h1[contains(text(),'My account')]]<br>]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2021-12-07T06:24:16 GMT" name="Default Suite" finished-at="2021-12-07T06:24:32 GMT" duration-ms="16765">
+    <groups>
+    </groups>
+    <test started-at="2021-12-07T06:24:16 GMT" name="Wk14-automation" finished-at="2021-12-07T06:24:32 GMT" duration-ms="16765">
+      <class name="com.automation.testsuite.CreateAccountPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.testsuite.CreateAccountPageTest@1d76aeea]" started-at="2021-12-07T06:24:16 GMT" name="setUp" finished-at="2021-12-07T06:24:24 GMT" duration-ms="7417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="inIt()[pri:0, instance:com.automation.testsuite.CreateAccountPageTest@1d76aeea]" started-at="2021-12-07T06:24:24 GMT" name="inIt" finished-at="2021-12-07T06:24:24 GMT" duration-ms="56" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inIt -->
+        <test-method signature="verifyThatUserShouldCreateAccountSuccessfully()[pri:0, instance:com.automation.testsuite.CreateAccountPageTest@1d76aeea]" started-at="2021-12-07T06:24:24 GMT" name="verifyThatUserShouldCreateAccountSuccessfully" finished-at="2021-12-07T06:24:32 GMT" duration-ms="8713" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Clicking on SignIn[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //a[contains(text(),'Sign in')]]<br>]]>
+            </line>
+            <line>
+              <![CDATA[Entering the email : [[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='email_create']]<br>]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on create account[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //button[@id='SubmitCreate']]<br>]]>
+            </line>
+            <line>
+              <![CDATA[Entering firstname[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='customer_firstname']]<br>]]>
+            </line>
+            <line>
+              <![CDATA[Entering lastname[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='customer_lastname']]<br>]]>
+            </line>
+            <line>
+              <![CDATA[Entering password[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='passwd']]<br>]]>
+            </line>
+            <line>
+              <![CDATA[Entering address[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='address1']]<br>]]>
+            </line>
+            <line>
+              <![CDATA[Entering city[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='city']]<br>]]>
+            </line>
+            <line>
+              <![CDATA[Selecting the state[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //select[@id='id_state']]<br>]]>
+            </line>
+            <line>
+              <![CDATA[Entering postalcode[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='postcode']]<br>]]>
+            </line>
+            <line>
+              <![CDATA[Entering contact number[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //input[@id='phone_mobile']]<br>]]>
+            </line>
+            <line>
+              <![CDATA[Clicking on register link[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //button[@id='submitAccount']]<br>]]>
+            </line>
+            <line>
+              <![CDATA[Verifying the message[[ChromeDriver: chrome on WINDOWS (fb76dfeb20db0a2d4c93876b5e0c914b)] -> xpath: //h1[contains(text(),'My account')]]<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- verifyThatUserShouldCreateAccountSuccessfully -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.testsuite.CreateAccountPageTest@1d76aeea]" started-at="2021-12-07T06:24:32 GMT" name="tearDown" finished-at="2021-12-07T06:24:32 GMT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.automation.testsuite.CreateAccountPageTest -->
+    </test> <!-- Wk14-automation -->
+  </suite> <!-- Default Suite -->
+</testng-results>

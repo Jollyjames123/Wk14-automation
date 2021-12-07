@@ -1,8 +1,10 @@
 package com.automation.testsuite;
 
+import com.automation.customlisteners.CustomListeners;
 import com.automation.pages.*;
 import com.automation.testbase.TestBase;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import resources.testdata.TestData;
 
@@ -13,7 +15,7 @@ import resources.testdata.TestData;
  *  Click on WOMEN tab
  *  Verify "WOMWN" text
  */
-
+@Listeners(CustomListeners.class)
 public class WomenCategoryPageTest extends TestBase {
     HomePage homePage;
     SignInPage signInPage;
@@ -47,16 +49,18 @@ public class WomenCategoryPageTest extends TestBase {
  *  Vetify the message "Product successfully added to your shopping cart"
  *  Click on X button and close the popup
  */
-@Test(dataProvider = "productsinthecart", dataProviderClass = TestData.class)
-public void verifyUserShouldAddProductToTheCartSuccessfully(String product, String qty, String size, String colour){
+@Test(priority = 1, dataProvider = "productsdata", dataProviderClass = TestData.class)
+public void verifyUserShouldAddProductToTheCartSuccessfully(String product, String qty, String size, String colour) throws InterruptedException {
 homePage.clickOnWomenTab();
+productPage.addingToTheCartSuccessfully(product,qty,size,colour);
 //productPage.clickOnTheProduct(product);
 //productPage.changeQty(qty);
 //productPage.selectSize(size);
 //productPage.selectColour(colour);
 //productPage.addToCart();
-productPage.addingToTheCartSuccessfully(product,qty,size,colour);
+//Thread.sleep(4000);
 //productPage.verifyPopUpMessage();
+//Thread.sleep(4000);
 //productPage.closeThePopUpMessage();
 
 }

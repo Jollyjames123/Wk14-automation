@@ -26,15 +26,15 @@ public class ProductPage extends HomePage {
     WebElement printedChiffonDressQtyFieldLink;
     @FindBy(xpath = "//i[@class='icon-plus']")
     WebElement printedSummerDressQty;
-    @FindBy(xpath = "(//select[@id='group_1'])[1]")
+    @FindBy(id = "group_1")
     WebElement printedSummerDressSize;
-    @FindBy(xpath = "(//li[@class='selected'])[1]")
+    @FindBy(xpath = "(//a[@id='color_14'])[1]")
     WebElement printedSummerDressColour;
-    @FindBy(xpath = "(//select[@id='group_1'])[1]")
+    @FindBy(id = "group_1")
     WebElement printedChiffonDressSize;
     @FindBy(xpath = "(//a[@id='color_15'])[1]")
-    WebElement printedChiffonDressSizeColour;
-    @FindBy(xpath = "(//div[@id='uniform-group_1'])[1]")
+    WebElement printedChiffonDressColour;
+    @FindBy(id = "group_1")
     WebElement printedDressSize;
     @FindBy(xpath = "(//a[@id='color_13'])[1]")
     WebElement printedDressColour;
@@ -42,9 +42,9 @@ public class ProductPage extends HomePage {
     WebElement blouseSize;
     @FindBy(xpath = "(//a[@id='color_8'])[1]")
     WebElement blouseColour;
-    @FindBy(xpath = "//span[contains(text(),'Add to cart')]")
+    @FindBy(xpath = "//span[normalize-space()='Add to cart']")
     WebElement addToCartButton;
-    @FindBy(xpath = "(//span[normalize-space()='Add to cart'])[1]")
+    @FindBy(xpath = "(//h2[normalize-space()='Product successfully added to your shopping cart'])[1]")
     WebElement popUpMessageTextLink;
     @FindBy(xpath = "//span[@title='Close window']")
     WebElement popUpCloseButtonLink;
@@ -52,7 +52,7 @@ public class ProductPage extends HomePage {
 
     public void clickOnTheProduct(String product) {
         if (product.equalsIgnoreCase("Blouse")) {
-             pmClickOnElement(blouseLink);
+            pmClickOnElement(blouseLink);
         } else if (product.equalsIgnoreCase("Printed Dress")) {
             pmClickOnElement(printedDressLink);
         } else if (product.equalsIgnoreCase("Printed Chiffon Dress")) {
@@ -76,15 +76,20 @@ public class ProductPage extends HomePage {
         }
     }
 
-    public void selectSize(String size) {
+    public void selectSize(String size)  {
         if (size.equalsIgnoreCase("M")) {
             pmSelectByVisibleTextFromDropDown(blouseSize, "M");
-        } else if (size.equalsIgnoreCase("L")) {
-            pmSelectByValueFromDropDown(printedDressSize, "L");
+            } else if (size.equalsIgnoreCase("L")) {
+            //pmClickOnElement(printedDressSize);
+            pmSelectByVisibleTextFromDropDown(printedDressSize, "L");
+            //Thread.sleep(2000);
         } else if (size.equalsIgnoreCase("S")) {
+            //pmClickOnElement(printedChiffonDressSize);
             pmSelectByVisibleTextFromDropDown(printedChiffonDressSize, "S");
+            //Thread.sleep(2000);
         } else if (size.equalsIgnoreCase("M")) {
             pmSelectByVisibleTextFromDropDown(printedSummerDressSize, "M");
+            //Thread.sleep(2000);
         }
     }
 
@@ -92,36 +97,41 @@ public class ProductPage extends HomePage {
         if (colour.equalsIgnoreCase("White")) {
             pmClickOnElement(blouseColour);
         } else if (colour.equalsIgnoreCase("Orange")) {
-            pmClickOnElement(blouseColour);
+            pmClickOnElement(printedDressColour);
         } else if (colour.equalsIgnoreCase("Green")) {
-            pmClickOnElement(blouseColour);
+            pmClickOnElement(printedChiffonDressColour);
         } else if (colour.equalsIgnoreCase("Blue")) {
-            pmClickOnElement(blouseColour);
+            pmClickOnElement(printedSummerDressColour);
         }
     }
 
-    public void addToCart() {
-        Reporter.log("Adding to cart" + addToCartButton.toString()+ "<br>");
+    public void addToCart() throws InterruptedException {
+        Reporter.log("Adding to cart" + addToCartButton.toString() + "<br>");
         pmClickOnElement(addToCartButton);
+        Thread.sleep(3500);
     }
-public void addingToTheCartSuccessfully(String product, String qty, String size, String colour){
+
+    public void addingToTheCartSuccessfully(String product, String qty, String size, String colour) throws InterruptedException {
 
         clickOnTheProduct(product);
         changeQty(qty);
         selectSize(size);
         selectColour(colour);
         addToCart();
+        Thread.sleep(3500);
         verifyPopUpMessage();
+        Thread.sleep(3500);
         closeThePopUpMessage();
-}
+    }
 
-    public void verifyPopUpMessage() {
-        Reporter.log("Verifying the popup Message" + popUpMessageTextLink.toString()+ "<br>");
+    public void verifyPopUpMessage() throws InterruptedException {
+        Reporter.log("Verifying the popup Message" + popUpMessageTextLink.toString() + "<br>");
         pmVerifyElements(popUpMessageTextLink, "Product successfully added to your shopping cart", "Page is not correctly displayed");
+        Thread.sleep(3500);
     }
 
     public void closeThePopUpMessage() {
-        Reporter.log("Closing the popup message" + popUpCloseButtonLink.toString()+ "<br>");
+        Reporter.log("Closing the popup message" + popUpCloseButtonLink.toString() + "<br>");
         pmClickOnElement(popUpCloseButtonLink);
     }
 }

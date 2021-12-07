@@ -1,12 +1,14 @@
 package com.automation.testsuite;
 
+import com.automation.customlisteners.CustomListeners;
 import com.automation.pages.HomePage;
 import com.automation.pages.SignInPage;
 import com.automation.testbase.TestBase;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import resources.testdata.TestData1;
-
+@Listeners(CustomListeners.class)
 public class SignPageTest extends TestBase {
     HomePage homePage;
     SignInPage signInPage;
@@ -42,7 +44,7 @@ public class SignPageTest extends TestBase {
      * | adfdfgfg | 123456 | Invalid email address. |
      * | abcd@gmail.com | 123456 | Authentication failed. |
      */
-    @Test(dataProvider = "credentials", dataProviderClass = TestData1.class)
+    @Test(priority = 1, dataProvider = "credentials", dataProviderClass = TestData1.class)
     public void verifyTheErrorMessageWithInValidCredentials(String username, String password) {
         homePage.clickOnSignIn();
         signInPage.loginToApplication(username, password);
@@ -57,7 +59,7 @@ public class SignPageTest extends TestBase {
      * Click on Sign Button
      * Verify that Sign out link is displayed
      */
-    @Test
+    @Test(priority = 2)
     public void verifyThatUserShouldLogInSuccessFullyWithValidCredentials() {
         homePage.clickOnSignIn();
         signInPage.enterUsername("prime@gmail.com");
@@ -75,7 +77,7 @@ public class SignPageTest extends TestBase {
      *  Click on Sign out Link
      *  Verify that Sign In Link displayed
      */
-    @Test
+    @Test(priority = 3)
     public void VerifyThatUserShouldLogOutSuccessFully() {
         homePage.clickOnSignIn();
         signInPage.enterUsername("prime@gmail.com");

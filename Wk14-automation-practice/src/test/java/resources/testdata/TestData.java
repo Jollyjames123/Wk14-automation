@@ -4,7 +4,7 @@ import org.testng.annotations.DataProvider;
 
 public class TestData {
 
-    @DataProvider(name = "productsinthecart")
+    @DataProvider(name = "productsdata")
     public Object[][] getData(){
         Object[][] data = new Object[][]{
                 {"Blouse","2","M","White"},

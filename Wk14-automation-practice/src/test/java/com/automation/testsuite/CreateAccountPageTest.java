@@ -1,10 +1,12 @@
 package com.automation.testsuite;
 
+import com.automation.customlisteners.CustomListeners;
 import com.automation.pages.CreateAccountPage;
 import com.automation.pages.HomePage;
 import com.automation.pages.SignInPage;
 import com.automation.testbase.TestBase;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 /**
@@ -19,7 +21,7 @@ import org.testng.annotations.Test;
  *  Click on "Register" button
  *  Verify message "My Account"
  */
-
+@Listeners(CustomListeners.class)
 public class CreateAccountPageTest extends TestBase {
     HomePage homePage;
     SignInPage signInPage;
